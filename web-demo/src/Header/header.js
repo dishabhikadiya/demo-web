@@ -8,10 +8,15 @@ const Header = () => {
       <div className="Container">
         <div className="row">
           <div className="col-7 col-lg-8 col-md-8 col-left">
+            <div className="header-left">
+              <a className="showSideNavButton btn-sidenav">
+                <img src="https://www.decluttr.com/Assets/Images/mobile-menu.png" />
+              </a>
+            </div>
             <a className="logo">
               <img
                 src="https://www.decluttr.com/Assets/Images/logo-decluttr.svg"
-                alt="logo"
+                alt="decluttr"
               />
             </a>
             <div className="buyAndSell">
@@ -25,7 +30,7 @@ const Header = () => {
                 <a className="col-7 col-lg-8 col-md-8">
                   <img
                     src="https://www.decluttr.com/Assets/Images/logo-bbb-1x.png"
-                    className="header2 gap"
+                    className="header2"
                   />
                 </a>
               </div>

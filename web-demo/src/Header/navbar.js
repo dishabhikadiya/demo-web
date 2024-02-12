@@ -22,6 +22,9 @@ const Navbar = () => {
                 <a>Sell Tech</a>
               </li>
               <li>
+                <a>Sell Games & Consoles</a>
+              </li>
+              <li>
                 <a>Corporate Trade-In</a>
               </li>
               <li>

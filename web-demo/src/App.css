@@ -5,12 +5,16 @@
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: calc(-1*var(--bs-gutter-y));
   margin-right: calc(-0.5*var(--bs-gutter-x));
   margin-left: calc(-0.5*var(--bs-gutter-x));
+
 }
-header .row {
+header  {
+  flex-wrap: nowrap;
+}
+.row .justify-content-center{
   flex-wrap: nowrap;
 }
 .col-7 {
@@ -240,7 +244,7 @@ header .cart .basket span {
 }
 #navit {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0;
 }
 .col-12 {
@@ -346,7 +350,7 @@ header .buyAndSell .sell, header .buyAndSell .shop {
   height: 29px;
   width: 100%;
   text-align: center;
-  padding: 0px 0px 0px 0px;
+  padding: 3px 0px 0px 0px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   border-bottom-left-radius: 7px;
@@ -544,9 +548,6 @@ h2:not(.accordion-header), .h2:not(.accordion-header) {
 .macro-container .products-grid .row {
   background: none;
 }
-/* .macro-container .products-grid .row {
-  background-color: #fff;
-} */
 .justify-content-center {
   justify-content: center !important;
 }
@@ -977,14 +978,6 @@ footer.footer .copyright span, footer.footer .copyright img {
   display: block;
   margin-bottom: 3px;
 }
-footer.footer .copyright span, footer.footer .copyright img {
-  display: block;
-  margin-bottom: 3px;
-}
-footer.footer .copyright img {
-  display: block;
-  margin-bottom: 3px;
-}
 footer.footer .copyright img {
   margin: auto;
   padding-bottom: 10px;
@@ -1000,6 +993,12 @@ footer.footer .copyright img {
   margin: initial;
   list-style: none;
 }
+.showSideNavButton{
+  display: none;
+}
+.row{
+  width: 50%;
+}
 .roww {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -1008,4 +1007,311 @@ footer.footer .copyright img {
   margin-top: calc(-1*var(--bs-gutter-y));
   margin-right: calc(-4.5*var(--bs-gutter-x));
   margin-left: calc(-6.5*var(--bs-gutter-x));
+}
+
+
+
+/* ----------------media Query------------------- */
+@media only screen and (max-width:1000px) {
+  .hero-area__content{
+    margin: 0px;
+    padding: 0px;
+  }
+}
+@media only screen and (max-width:719px){
+  .footer-columns{
+    display: contents;
+  }
+  .collapse{
+    display: none;
+  }
+  footer.footer .heading{
+    border-bottom: 1px solid #555;
+  }
+  .trustpilotwidget__content{
+    width: 65%;
+    margin-left: 221px;
+  }
+  .trustpilotwidget__bottom-image{
+    margin-left: 221px;
+  }
+  .parallax__content{
+    width: 65%;
+    margin-left: 45px;
+  }
+  .parallax__image{
+    display: none;
+  }
+  .umb-grid{
+    width: 200%;
+  }
+  .blue-izanami-button:last-child, .dusk-izanami-button:last-child, .green-izanami-button:last-child {
+    margin-right: 0px;
+  }
+  .macro-container .products-grid>.row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .macro-container .products-grid .row {
+    margin: 0;
+  }
+  .row .justify-content-center{
+    flex-wrap: wrap;
+  }
+  .grid-item-card-izanami:not(.v2){
+    height: max-content;
+    min-height: 160px;
+  }
+  .grid-item-card-izanami{
+    max-width: 166px;
+    padding: 8.5px;  
+  }
+  .productgrid-banner {
+    width: 100%;  
+    margin: 80px;
+    flex-wrap: wrap;
+    width: 64%;
+  }
+  h2:not(.accordion-header).white-title, .h2:not(.accordion-header).white-title {
+    font-size: small;
+  }
+  header {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media only screen and (max-width:320px){
+  .umb-grid{
+    width: 195%;
+  }
+  .trustpilotwidget__content{
+    width: 65%;
+    margin-left: 105px;
+  }
+  .trustpilotwidget__bottom-image{
+    margin-left: 105px;
+  }
+  .parallax__content{
+    width: 65%;
+    margin-left: -65px;
+  }
+  .parallax__image{
+    display: none;
+  }
+  .parallax__container{
+    width: auto;
+  }
+  .row .justify-content-center{
+    flex-wrap: wrap;
+  }
+  .hero-area__buttons{
+    display: contents;
+  }
+  .hero-area__btn_blue{
+    margin-bottom: 20px;
+    margin: 50px;
+  }
+  .grid-item-card-izanami:not(.v2){
+    height: max-content;
+    min-height: 160px;
+  }
+  .grid-item-card-izanami{
+    max-width: 166px;
+    height: max-content;
+    padding: 7.5px !important;  
+  }
+  .productgrid-banner {
+    width: 100%;  
+    margin: 80px;
+    flex-wrap: wrap;
+    width: 64%;
+  }
+  h2:not(.accordion-header).white-title, .h2:not(.accordion-header).white-title {
+    font-size: small;
+  }
+  header {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .footer-columns{
+    display: contents;
+  }
+  .collapse{
+    display: none;
+  }
+  footer.footer .heading{
+    border-bottom: 1px solid #555;
+  }
+}
+@media only screen and (max-width:1024px){
+  .footer-columns{
+    display: contents;
+  }
+  .collapse{
+    display: none;
+  }
+  footer.footer .heading{
+    border-bottom: 1px solid #555;
+  }
+  .row .justify-content-center {
+    flex-wrap: wrap;
+  }
+  .grid-item-card-izanami:not(.v2){
+    height: max-content;
+    min-height: 160px;
+  }
+  .grid-item-card-izanami{
+    max-width: 166px;
+    height: max-content;
+    padding: 7.5px !important;  
+  }
+  .productgrid-banner {
+    width: 100%;  
+    margin: 76px;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  .trustpilotwidget__content{
+    width: 65%;
+    margin-left: 144px;
+  }
+  .trustpilotwidget__bottom-image{
+    margin-left: 144px;
+  }
+  .parallax__content{
+    width: 65%;
+    margin-left: -30px;
+  }
+  .parallax__image{
+    display: none;
+  }
+}
+@media only screen and (max-width:425px){
+  .footer-columns{
+    display: contents;
+  }
+  .collapse{
+    display: none;
+  }
+  footer.footer .heading{
+    border-bottom: 1px solid #555;
+  }
+  .productgrid-banner {
+    width: 100%;
+    margin: 92px;
+    flex-wrap: wrap;
+    width: 58%;
+  }
+  .trustpilotwidget__content{
+    width: 65%;
+    margin-left: 144px;
+  }
+  .trustpilotwidget__bottom-image{
+    margin-left: 144px;
+  }
+  .parallax__content{
+    width: 65%;
+    margin-left: -65px;
+  }
+  .parallax__image{
+    display: none;
+  }
+  .umb-grid{
+    width: 200%;
+  }
+  header {
+   flex-wrap: wrap;
+   width: 100%;
+  }
+  .productgrid-banner{
+    margin: 105px;
+    width: 57%;
+  }
+}
+@media only screen and (max-width:1161px){
+  .hero-area__img{
+   display: none;
+  }
+  .footer-columns{
+    display: contents;
+  }
+  .collapse{
+    display: none;
+  }
+  footer.footer .heading{
+    border-bottom: 1px solid #555;
+  }
+  .row .justify-content-center {
+    flex-wrap: wrap;
+  }
+  .grid-item-card-izanami:not(.v2){
+    height: max-content;
+    min-height: 160px;
+  }
+  .grid-item-card-izanami{
+    max-width: 166px;
+    height: max-content;
+    padding: 7.5px !important;  
+  }
+  .productgrid-banner {
+    width: 100%;
+    margin: 84px;
+    flex-wrap: wrap;
+    width: 61%; 
+  }
+  .mainNavigationContent{
+  display: none;
+  }
+  header .buyAndSell{
+  display: none;
+  }
+  header .cart .basket span{
+  display: none;
+  }
+  header .acount_block a .heading{
+  display: none;
+  }
+  header .acount_block .links{
+  display: none;
+  }
+  header .acount_block {
+  margin-top: 25px;
+  width: 10px;
+  }
+  header .showSideNavButton {
+  float: left;
+  width: 60px;
+  height: 47px;
+  display: block;
+  border-right: 1px solid #ccc;
+  padding: 17px 0 15px 5px;
+  margin-left: 7px;
+  }
+ .showSideNavButton, .show-SideNavigation {
+  cursor: pointer;
+  color: #fff;
+  }
+  .hero-area__content{
+  padding: 46px 105px;
+  }
+ .hero-area h1, .hero-area .h1{
+  font-size: 20px;
+  }
+ .hero-area__sub-text .row p{
+  padding: 25px 15px;
+  }
+  .trustpilotwidget__content{
+    width: 65%;
+    margin-left: 113px;
+  }
+  .trustpilotwidget__bottom-image{
+    margin-left: 221px;
+  }
+  .parallax__content{
+    width: 65%;
+    margin-left: -66px;
+  }
+  .parallax__image{
+    display: none;
+  }
 }

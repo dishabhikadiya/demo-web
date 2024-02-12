@@ -1,8 +1,27 @@
-import React from "react";
-import "../simple-grid.min.css";
+import React, { useEffect, useState } from "react";
+// import "../simple-grid.min.css";
 import "../App.css";
 import Popular from "./popular";
 const Products = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:4000/api/get");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <div className="bg-grey">
       <div className="container">
@@ -238,60 +257,35 @@ const Products = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="row justify-content-center">
-                    <div className="grid-item-izanami coll-6 col-lg-3 col-xl-3 py-2 py-sm-3">
-                      <div className="grid-item-card-izanami">
-                        <div className="grid-item-header v1">
-                          <div className="grid-item-image-wrapper-izanami v1">
-                            <div className="grid-item-image-izanami v1">
-                              <picture className="d-flex">
-                                <img
-                                  src="	https://media.umbraco.io/heartcore/goneszqx/samsung.jpg"
-                                  style={{ maxHeight: "110px" }}
-                                  className="grid-item-image-izanami-img"
-                                />
-                              </picture>
+                    {data.map((item) => (
+                      <div className="grid-item-izanami coll-6 col-lg-3 col-xl-3 py-2 py-sm-3">
+                        <div className="grid-item-card-izanami">
+                          <div className="grid-item-header v1">
+                            <div className="grid-item-image-wrapper-izanami v1">
+                              <div className="grid-item-image-izanami v1">
+                                <picture className="d-flex">
+                                  <img
+                                    src={item?.imageUrl}
+                                    style={{ maxHeight: "110px" }}
+                                    className="grid-item-image-izanami-img"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+                            <div className="grid-item-name-izanami v1 align-self-center">
+                              {item?.key}
                             </div>
                           </div>
-                          <div className="grid-item-name-izanami v1 align-self-center">
-                            Samsung
-                          </div>
-                        </div>
-                        <div className="grid-item-content-izanami v1 flex-column">
-                          <div className="grid-item-buttons-izanami v1">
-                            <a className="blue-izanami-button">shop</a>
-                            <a className="green-izanami-button">Sell</a>
+                          <div className="grid-item-content-izanami v1 flex-column">
+                            <div className="grid-item-buttons-izanami v1">
+                              <a className="blue-izanami-button">shop</a>
+                              <a className="green-izanami-button">Sell</a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="grid-item-izanami coll-6 col-lg-3 col-xl-3 py-2 py-sm-3">
-                      <div className="grid-item-card-izanami">
-                        <div className="grid-item-header v1">
-                          <div className="grid-item-image-wrapper-izanami v1">
-                            <div className="grid-item-image-izanami v1">
-                              <picture className="d-flex">
-                                <img
-                                  src="https://media.umbraco.io/heartcore/eetja2h0/ipad.jpg"
-                                  style={{ maxHeight: "110px" }}
-                                  className="grid-item-image-izanami-img"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-                          <div className="grid-item-name-izanami v1 align-self-center">
-                            IPad
-                          </div>
-                        </div>
-                        <div className="grid-item-content-izanami v1 flex-column">
-                          <div className="grid-item-buttons-izanami v1">
-                            <a className="blue-izanami-button">shop</a>
-                            <a className="green-izanami-button">Sell</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>

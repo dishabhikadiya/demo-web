@@ -1,5 +1,5 @@
 import React from "react";
-import "../simple-grid.min.css";
+// import "../simple-grid.min.css";
 import "../App.css";
 import BuyAndSell from "./buyAndSell";
 
