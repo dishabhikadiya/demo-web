@@ -939,7 +939,7 @@ footer.footer .heading {
   width: auto;
   cursor: auto;
   padding-left: 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0); */
   background: none !important;
 }
 
@@ -1019,8 +1019,81 @@ footer.footer .copyright img {
   }
 }
 @media only screen and (max-width:719px){
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 387px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .5s cubic-bezier(1, 0.005, 0.655, 0.995);
+    }
+  .bar{
+    color: #ccc;
+  }
+  .bar ul li{
+    list-style: none;
+    margin: 0px;
+    padding: 6px;
+    font-size: 25px;
+    border-bottom: #23272a px solid;
+  }
+  .goBuy{
+    font-size: 25px;
+    color: #fff;
+    padding: 10%;
+    background-color: #165b90;
+    padding-left: 105px;
+  }
+  .goBuy span {
+    padding: 0%;
+  }
+  .goSell span {
+    padding: 0%;
+  }
+  .goSell{
+    background-color: #00537e;
+    font-size: 25px;
+    padding: 10%;
+    padding-left: 114px;
+    color: #fff;
+  }
+  .drawer{
+    background-color: #2b2f32;
+  }
+  .drawer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding: 25px;
+  }
+  
+  .drawer button:hover {
+    color: #333;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  .register{
+    background-color: #090;
+    color: whitesmoke;
+    padding: 25px;
+    font-size: 24px;
+    display: flex;
+  }
+  .register a {
+    padding-top:30px;
+  }
   .footer-columns{
     display: contents;
+  }
+  footer.footer .copyright {
+    border: none;
   }
   .collapse{
     display: none;
@@ -1081,6 +1154,74 @@ footer.footer .copyright img {
   }
 }
 @media only screen and (max-width:320px){
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 387px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .5s cubic-bezier(1, 0.005, 0.655, 0.995);
+    }
+  .bar{
+    color: #ccc;
+  }
+  .bar ul li{
+    list-style: none;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    border-bottom:#23272a px solid
+  }
+  .goBuy{
+    font-size: 30px;
+    color: #fff;
+    padding: 18%;
+    background-color: #165b90;
+  }
+  .goBuy span {
+    padding: 0%;
+  }
+  .goSell span {
+    padding: 0%;
+  }
+  .goSell{
+    background-color: #00537e;
+    font-size: 30px;
+    padding: 18%;
+    color: #fff;
+  }
+  .drawer{
+    background-color: #2b2f32;
+  }
+  .drawer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding: 25px;
+  }
+  
+  .drawer button:hover {
+    color: #333;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  .register{
+    background-color: #090;
+    color: whitesmoke;
+    padding: 52px;
+    font-size: 30px;
+    display: flex;
+  }
+  .register a {
+    padding-top:30px;
+  }
   .umb-grid{
     width: 195%;
   }
@@ -1142,13 +1283,89 @@ footer.footer .copyright img {
   footer.footer .heading{
     border-bottom: 1px solid #555;
   }
+  footer.footer .copyright {
+    border: none;
+  }
 }
 @media only screen and (max-width:1024px){
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 387px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .5s cubic-bezier(1, 0.005, 0.655, 0.995);
+    }
+  .bar{
+    color: #ccc;
+  }
+  .bar ul li{
+    list-style: none;
+    margin: 0px;
+    padding: 6px;
+    font-size: 25px;
+    border-bottom: #23272a px solid;
+  }
+  .goBuy{
+    font-size: 25px;
+    color: #fff;
+    padding: 10%;
+    background-color: #165b90;
+    padding-left: 105px;
+  }
+  .goBuy span {
+    padding: 0%;
+  }
+  .goSell span {
+    padding: 0%;
+  }
+  .goSell{
+    background-color: #00537e;
+    font-size: 25px;
+    padding: 10%;
+    padding-left: 114px;
+    color: #fff;
+  }
+  .drawer{
+    background-color: #2b2f32;
+  }
+  .drawer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding: 25px;
+  }
+  
+  .drawer button:hover {
+    color: #333;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  .register{
+    background-color: #090;
+    color: whitesmoke;
+    padding: 25px;
+    font-size: 24px;
+    display: flex;
+  }
+  .register a {
+    padding-top:30px;
+  }
   .footer-columns{
     display: contents;
   }
   .collapse{
     display: none;
+  }
+  footer.footer .copyright {
+    border: none;
   }
   footer.footer .heading{
     border-bottom: 1px solid #555;
@@ -1187,6 +1404,74 @@ footer.footer .copyright img {
   }
 }
 @media only screen and (max-width:425px){
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 387px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .5s cubic-bezier(1, 0.005, 0.655, 0.995);
+    }
+  .bar{
+    color: #ccc;
+  }
+  .bar ul li{
+    list-style: none;
+    margin: 20px;
+    padding: 10px;
+    font-size: 30px;
+    border-bottom:#23272a px solid
+  }
+  .goBuy{
+    font-size: 30px;
+    color: #fff;
+    padding: 18%;
+    background-color: #165b90;
+  }
+  .goBuy span {
+    padding: 0%;
+  }
+  .goSell span {
+    padding: 0%;
+  }
+  .goSell{
+    background-color: #00537e;
+    font-size: 30px;
+    padding: 18%;
+    color: #fff;
+  }
+  .drawer{
+    background-color: #2b2f32;
+  }
+  .drawer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding: 25px;
+  }
+  
+  .drawer button:hover {
+    color: #333;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  .register{
+    background-color: #090;
+    color: whitesmoke;
+    padding: 52px;
+    font-size: 30px;
+    display: flex;
+  }
+  .register a {
+    padding-top:30px;
+  }
   .footer-columns{
     display: contents;
   }
@@ -1195,6 +1480,9 @@ footer.footer .copyright img {
   }
   footer.footer .heading{
     border-bottom: 1px solid #555;
+  }
+  footer.footer .copyright {
+    border: none;
   }
   .productgrid-banner {
     width: 100%;
@@ -1229,6 +1517,76 @@ footer.footer .copyright img {
   }
 }
 @media only screen and (max-width:1161px){
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 387px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all .5s cubic-bezier(1, 0.005, 0.655, 0.995);
+    }
+  .bar{
+    color: #ccc;
+  }
+  .bar ul li{
+    list-style: none;
+    margin: 0px;
+    padding: 6px;
+    font-size: 25px;
+    border-bottom: #23272a px solid;
+  }
+  .goBuy{
+    font-size: 25px;
+    color: #fff;
+    padding: 10%;
+    background-color: #165b90;
+    padding-left: 105px;
+  }
+  .goBuy span {
+    padding: 0%;
+  }
+  .goSell span {
+    padding: 0%;
+  }
+  .goSell{
+    background-color: #00537e;
+    font-size: 25px;
+    padding: 10%;
+    padding-left: 114px;
+    color: #fff;
+  }
+  .drawer{
+    background-color: #2b2f32;
+  }
+  .drawer button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding: 25px;
+  }
+  
+  .drawer button:hover {
+    color: #333;
+  }
+  
+  .drawer.open {
+    transform: translateX(0); 
+  }
+  .register{
+    background-color: #090;
+    color: whitesmoke;
+    padding: 25px;
+    font-size: 24px;
+    display: flex;
+  }
+  .register a {
+    padding-top:30px;
+  }
   .hero-area__img{
    display: none;
   }
@@ -1240,6 +1598,9 @@ footer.footer .copyright img {
   }
   footer.footer .heading{
     border-bottom: 1px solid #555;
+  }
+  footer.footer .copyright {
+    border: none;
   }
   .row .justify-content-center {
     flex-wrap: wrap;

@@ -4,7 +4,7 @@ import "../App.css";
 import Baner from "./baner";
 const Navbar = () => {
   return (
-    <nav className="mainNavigationWrapper">
+    <nav className="mainNavigationWrapper slidemenu slidemenuChange">
       <div className="mainNavigationContent">
         <div className="Container">
           <div className="row">
